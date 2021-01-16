@@ -12,22 +12,30 @@ var tableData = data;
 // Function to build the table
 data.forEach(function(tableBuilder) {
     console.log(tableBuilder);
-//Using d3 to append one table row `tr` for each data object
+    // Start By Clearing Existing Data
+     tbody.html("");
+    //Using d3 to append one table row `tr` for each data object
     var row =tbody.append("tr");
     
     Object.entries(tableBuilder).forEach(function([key, value]) {
         console.log(key, value);
 
-// Use d3 to append 1 cell per report value (date/time, city, state, country, shape, and comment )
-// Append a cell to the row for each value in the report object
+    // Use d3 to append 1 cell per report value (date/time, city, state, country, shape, and comment )
+    // Append a cell to the row for each value in the report object
     var cell = row.append("td");
     cell.text(value);
 
     });     
 });
 
-// Event that Triggers a Function When the Button is Clicked
+    // Event that Triggers a Function When the Button is Clicked
 
 var button =d3.select("#filter-btn#");
 var input =d3.select(".form-control");
 
+function handleClick(){
+
+// Prevents the Page from Refreshing
+     d3.event.preventDefault();
+};
+button.on("click",handleClick);
