@@ -10,8 +10,22 @@ var tableData = data;
 // YOUR CODE HERE!
 
 // Function to build the table
-data.forEach(function(tableBuilder){
+data.forEach(function(tableBuilder) {
     console.log(tableBuilder);
+//Using d3 to append one table row `tr` for each data object
+    var row =tbody.append("tr");
+    
+    Object.entries(tableBuilder).forEach(function([key, value]) {
+        console.log(key, value);
+
+// Use d3 to append 1 cell per report value (date/time, city, state, country, shape, and comment )
+// Append a cell to the row for each value
+//     // in the weather report object
+//     var cell = row.append("td");
+
+    });
+    
+        
+
 });
 
-//Using d3 to append one table row `tr` for each data object
