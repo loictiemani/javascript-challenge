@@ -26,3 +26,8 @@ data.forEach(function(tableBuilder) {
     });     
 });
 
+// Event that Triggers a Function When the Button is Clicked
+
+var button =d3.select("#filter-btn#");
+var input =d3.select(".form-control");
+
