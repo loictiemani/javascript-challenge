@@ -53,5 +53,9 @@ function handleClick(){
 };
 
 // `on` Function to attach an Event to the Handler Function
-button.on("click",handleClick);
+d3.selectAll("#filter-btn").on("click",handleClick);
+
+// Build Table data.js
+
+tableBuilder(tableData);
 
