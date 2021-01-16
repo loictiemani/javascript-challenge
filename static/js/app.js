@@ -23,9 +23,6 @@ data.forEach(function(tableBuilder) {
     var cell = row.append("td");
     cell.text(value);
 
-    });
-    
-        
-
+    });     
 });
 
