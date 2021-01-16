@@ -48,9 +48,7 @@ function handleClick(){
         console.log(filterData)
 
     };
-    else if (city) {
-        filterData = tableData.filter((row) => row.city === city);
-    };
+
     //clear table
     tbody.html("")
 
