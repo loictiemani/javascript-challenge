@@ -44,7 +44,11 @@ function handleClick(){
     var filterData = tableData;
 
     // Check if a Date was Entered & Filter Data Using that Date;
+    if (date) {
 
+        // Apply Filter to the Table Data to Only Keep Rows Where datetime Value Matches the Filter Value
+        filterData = filterData.filter((row) => row.datetime === date);
+    }
 };
 button.on("click",handleClick);
 
