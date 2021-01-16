@@ -9,5 +9,9 @@ var tableData = data;
 
 // YOUR CODE HERE!
 
-// function to build the table
+// Function to build the table
+data.forEach(function(tableBuilder){
+    console.log(tableBuilder);
+});
 
+//Using d3 to append one table row `tr` for each data object
