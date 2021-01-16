@@ -21,6 +21,7 @@ data.forEach(function(tableBuilder) {
 // Use d3 to append 1 cell per report value (date/time, city, state, country, shape, and comment )
 // Append a cell to the row for each value in the report object
     var cell = row.append("td");
+    cell.text(value);
 
     });
     
