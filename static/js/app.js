@@ -28,14 +28,19 @@ data.forEach(function(tableBuilder) {
     });     
 });
 
-    // Event that Triggers a Function When the Button is Clicked
+// Event that Triggers a Function When the Button is Clicked
 
 var button =d3.select("#filter-btn#");
 var input =d3.select(".form-control");
 
 function handleClick(){
 
-// Prevents the Page from Refreshing
+    // Prevents the Page from Refreshing
      d3.event.preventDefault();
+
+// Select HTML Input Element & Get the Value Property of that Input Element
+
+var date = d3.select("#datetime").property("value");
+
 };
 button.on("click",handleClick);
