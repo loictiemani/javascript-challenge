@@ -42,29 +42,29 @@ function handleClick(){
     var state = d3.select("#state").property("value");
     var country = d3.select("#country").property("value");
     var shape = d3.select("#shape").property("value");
-    //var filterData = tableData;
+    var filterData = tableData;
 
     // Check if a Date was Entered & Filter Data Using that Date;
     if (date) {
 
-        // Apply Filter to the Table Data to Only Keep Rows Where datetime Value Matches the Filter Value
-        filterData = tableData.filter((row) => row.datetime === date);
+        // Apply Filter to the Table Data to Only Keep Rows Where Value Matches the Filter Value
+        filterData = filterData.filter((row) => row.datetime === date);
         console.log(filterData)
     };
     if(city) {
-        filterData = tableData.filter((row) => row.city === city);
+        filterData = filterData.filter((row) => row.city === city);
         console.log(filterData)
     };
     if(state) {
-        filterData = tableData.filter((row) => row.state === state);
+        filterData = filterData.filter((row) => row.state === state);
         console.log(filterData)
     };
     if(country) {
-        filterData = tableData.filter((row) => row.country === country);
+        filterData = filterData.filter((row) => row.country === country);
         console.log(filterData)
     };
     if(shape) {
-        filterData = tableData.filter((row) => row.shape === shape);
+        filterData = filterData.filter((row) => row.shape === shape);
         console.log(filterData)
     };   
 
