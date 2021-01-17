@@ -38,6 +38,10 @@ function handleClick(){
     // Select HTML Input Element & Get the Value Property of that Input Element
 
     var date = d3.select("#datetime").property("value");
+    var city = d3.select("#city").property("value");
+    var state = d3.select("#state").property("value");
+    var country = d3.select("#country").property("value");
+    var shape = d3.select("#shape").property("value");
     //var filterData = tableData;
 
     // Check if a Date was Entered & Filter Data Using that Date;
@@ -46,11 +50,24 @@ function handleClick(){
         // Apply Filter to the Table Data to Only Keep Rows Where datetime Value Matches the Filter Value
         filterData = tableData.filter((row) => row.datetime === date);
         console.log(filterData)
-
     };
-    else if (city){
+    if(city) {
         filterData = tableData.filter((row) => row.city === city);
-    }
+        console.log(filterData)
+    };
+    if(state) {
+        filterData = tableData.filter((row) => row.state === state);
+        console.log(filterData)
+    };
+    if(country) {
+        filterData = tableData.filter((row) => row.country === country);
+        console.log(filterData)
+    };
+    if(shape) {
+        filterData = tableData.filter((row) => row.shape === shape);
+        console.log(filterData)
+    };   
+
     //clear table
     tbody.html("")
 
